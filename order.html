@@ -1,0 +1,154 @@
+    <!doctype html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+        <title>Commande - Pâtisserie des Rêves</title>
+    </head>
+
+    <body>
+        <!--NAVBAR--> <!--NAVBAR-->
+                            <nav class="navbar navbar-expand-lg  bg-transparent fixed-top" style="z-index: 1000;">
+                                <div class="container-fluid">
+                                    <a class="navbar-brand fw-bold d-flex align-items-center" href="index.html" 
+                                    style="color:#e89a09;">
+                                        <i class="bi bi-cake2-fill me-2" style="color: #e88419;"></i>
+                                        <h1>YUME NO KASHI</h1>
+                                    </a>
+                                    
+                
+                
+                
+                                    <!-- TOGGLER MOBILE -->
+                                    <button class="navbar-toggler d-lg-none" 
+                                        type="button"  
+                                        style="border: none; color: #e88419;"
+                                        data-bs-toggle="offcanvas" 
+                                        data-bs-target="#offcanvasNavbar">
+                                        <span class="navbar-toggler-icon"></span>
+                                    </button>
+                
+                
+                                    <!-- MENU DESKTOP (PILULE BLEUE) -->
+                                        <div class="collapse navbar-collapse d-none d-lg-block">
+                                            <ul class="navbar-nav flex-row gap-0 rounded-pill px-0 py-0  ms-auto" style="background-color: #e78114; font-weight: 600;">
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-white mx-lg-2"href="index.html">Accueil</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-white mx-lg-2" href="about.html">about</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-white mx-lg-2" href="order.html" >order</a>
+                                                </li>
+                                                <li class="nav-item">
+                                                    <a class="nav-link text-white mx-lg-2" href="products.html" >products</a>
+                                                </li>
+                                                
+                                            </ul>
+                                            <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">    
+                                                NOUS CONTACTER
+                                            </a>
+                                        </div>
+                                    </div>
+                                </nav>
+                
+                
+                
+                                <!-- OFFCANVAS MOBILE (SOMBRE, SORT DE DROITE) -->
+                                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar">
+                                    <div class="offcanvas-header">
+                                        <h5 class="offcanvas-title">Menu</h5>
+                                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas"></button>
+                                    </div>
+                                    <div class="offcanvas-body d-flex flex-column align-items-center justify-content-center gap-5">
+                                        <ul class="navbar-nav text-center gap-5">
+                                            <li class="nav-item">
+                                                <a class="nav-link text-white mx-lg-2"href="index.html">Accueil</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-white mx-lg-2" href="about.html">about</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-white mx-lg-2" href="order.html" >order</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                <a class="nav-link text-white mx-lg-2" href="products.html" >products</a>
+                                            </li>
+                                            
+                                        </ul>
+                                        <a href="contact.html" class="btn btn-outline-light rounded-pill px-4 py-2 fw-bold">
+                                            NOUS CONTACTER
+                                        </a>
+                                    </div>
+                                </div>
+        <!-- COMMANDE SECTION -->
+    
+                    <section class="py-5" style="background: linear-gradient(135deg, #e69451 0%, #f0f7f9 100%); min-height: 100vh;">
+            <div class="container">
+            <div class="row justify-content-center">
+            <div class="col-lg-6 col-md-8">
+                <h2 class="text-center mb-5 fw-bold display-5" style="color: #edeceb">📋 Commande</h2>
+
+                <div class="card bg-secondary rounded-4">
+                <div class="card-body p-5" style="background-color: #f5dbbe;border-radius: 20px;">
+                    <form id="orderForm">
+                    <!-- Nom -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold" style="color: #e87f07">Nom *</label>
+                        <input type="text" class="form-control bg-dark text-light border-warning" id="name" placeholder="Votre nom complet" required />
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold" style="color: #e87f07">Téléphone *</label>
+                        <input type="tel" class="form-control bg-dark text-light border-warning" id="phone" placeholder="+225 XX XX XX XX" required />
+                    </div>
+
+                    <!-- Adresse -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold" style="color: #e87f07">Adresse *</label>
+                        <textarea class="form-control bg-dark text-light border-warning" id="address" rows="3" placeholder="Adresse de livraison" required></textarea>
+                    </div>
+
+                    <!-- Produit -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold" style="color: #e87f07">Produit *</label>
+                        <select class="form-select bg-dark text-light border-warning" id="product" required>
+                        <option value="">-- Sélectionner un produit --</option>
+                        <option value="🍰 Mille-Feuille Doré - 15 000 FCFA">🍰 Mille-Feuille Doré - 15 000 FCFA</option>
+                        <option value="🌙 Éclairs Nocturnes - 12 000 FCFA">🌙 Éclairs Nocturnes - 12 000 FCFA</option>
+                        <option value="✨ Tartelette Rêverie - 10 000 FCFA">✨ Tartelette Rêverie - 10 000 FCFA</option>
+                        <option value="🎂 Croquembouche Royal - 28 000 FCFA">🎂 Croquembouche Royal - 28 000 FCFA</option>
+                        <option value="👑 Entremet Suprême - 35 000 FCFA">👑 Entremet Suprême - 35 000 FCFA</option>
+                        <option value="💎 Paris-Brest Prestige - 31 000 FCFA">💎 Paris-Brest Prestige - 31 000 FCFA</option>
+                        </select>
+                    </div>
+
+                    <!-- Quantité -->
+                    <div class="mb-4">
+                        <label class="form-label fw-bold" style="color: #e87f07">Quantité *</label>
+                        <input type="number" class="form-control bg-dark text-light border-warning" id="quantity" value="1" min="1" required />
+                    </div>
+
+                    <!-- Bouton -->
+                    <button type="submit" class="btn w-100 fw-bold fs-5" style="background-color: #e87f07; color: white; border: none; border-radius: 25px;">
+                        COMMANDER
+                    </button>
+                    </form>
+                </div>
+                </div>
+            </div>
+            </div>
+        </div>
+        </section>
+
+    
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+        
+        </script>
+    </body>
+    </html>
